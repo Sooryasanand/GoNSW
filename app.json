@@ -23,11 +23,6 @@
       },
       "package": "com.GoNSW.GoNSW",
       "versionCode": 2,
-      "config": {
-        "googleMaps": {
-          "apiKey": "AIzaSyAkORkriEMqBNkelQNi8MrKfjEqdJSsiz8"
-        }
-      }
     },
     "web": {
       "bundler": "metro",
