@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "GoNSW",
+    "slug": "GoNSW",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo_icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.GoNSW.GoNSW"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/logo_icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.GoNSW.GoNSW",
+      "versionCode": 2,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAkORkriEMqBNkelQNi8MrKfjEqdJSsiz8"
+        }
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "bb168d45-c9d3-4dc8-9f88-107e20a399ba"
+      }
+    }
+  }
+}
