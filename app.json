@@ -22,7 +22,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "com.GoNSW.GoNSW",
-      "versionCode": 2,
+      "versionCode": 2
     },
     "web": {
       "bundler": "metro",
