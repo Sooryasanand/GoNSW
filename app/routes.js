@@ -8,17 +8,14 @@ import {
   ActivityIndicator,
   SafeAreaView,
   Alert,
-  Button,
 } from "react-native";
 import { useState, useEffect } from "react";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import { ScrollView } from "react-native-gesture-handler";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import { useRouter } from "expo-router";
-import { debounce } from "lodash";
 import * as Location from "expo-location";
 import { useLocalSearchParams } from "expo-router";
-import Config from "react-native-config";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 
 export default function Routes() {
@@ -37,7 +34,6 @@ export default function Routes() {
 
   const router = useRouter();
   const { departStation, arrivalStation } = useLocalSearchParams();
-  const apiKey = Config.API_KEY;
 
   const getLocation = async () => {
     setLoading(true);
@@ -58,7 +54,6 @@ export default function Routes() {
 
   const fetchNearbyPlaces = async (latitude, longitude) => {
     const url = `https://api.transport.nsw.gov.au/v1/tp/coord?outputFormat=rapidJSON&coord=${longitude}:${latitude}:EPSG:4326&coordOutputFormat=EPSG%3A4326&inclFilter=1&type_1=BUS_p&radius_1=3000&PoisOnMapMacro=true&version=10.2.1.42`;
-
     try {
       const response = await fetch(url, {
         headers: {
@@ -99,7 +94,7 @@ export default function Routes() {
 
   const fetchJourneyData = async (fromId, toId, selectedDate) => {
     if (!fromId || !toId) {
-      alert("Please enter both origin and destination IDs.");
+      alert("Please enter both origin and destination.");
       return;
     }
 
@@ -118,11 +113,16 @@ export default function Routes() {
           Authorization: `apikey ${process.env.API_KEY}`,
         },
       });
+
       const data = await response.json();
-      if (!data || !Array.isArray(data.journeys)) {
-        throw new Error("No journeys found");
+
+      if (!data.journeys || !Array.isArray(data.journeys)) {
+        console.error("Invalid or missing journeys in response:", data);
+        setJourneys([]);
+        return;
       }
       setJourneys(data.journeys);
+      return data.journeys;
     } catch (error) {
       console.error("Error fetching journey data:", error);
     }
@@ -130,7 +130,6 @@ export default function Routes() {
 
   const processJourneys = (journeysArray) => {
     const seenTrainIds = new Set();
-
     return journeysArray.map((journey) => {
       return {
         legs: journey.legs.map((leg, legIndex) => {
@@ -422,7 +421,7 @@ export default function Routes() {
             />
           </View>
           <View style={styles.inputFieldContainer}>
-            <Text style={[styles.inputFieldText, { marginRight: 15 }]}>To</Text>
+            <Text style={[styles.inputFieldText, { marginRight: 18 }]}>To</Text>
             <TextInput
               style={styles.inputField}
               value={to}
@@ -438,6 +437,7 @@ export default function Routes() {
         </TouchableOpacity>
       </View>
       <View style={styles.datePickerContainer}>
+        <Text style={{ color: "white", marginRight: 22 }}>Depart</Text>
         <TouchableOpacity
           onPress={showDatePicker}
           style={styles.datePickerButton}
@@ -460,6 +460,7 @@ export default function Routes() {
         onConfirm={handleConfirm}
         onCancel={hideDatePicker}
         is24Hour={true}
+        minimumDate={new Date()}
       />
       <TouchableOpacity
         style={[
@@ -534,12 +535,17 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   inputField: {
-    backgroundColor: "white",
+    backgroundColor: "#242424",
     margin: 5,
     flex: 1,
-    color: "black",
+    color: "white",
     paddingHorizontal: 5,
-    marginLeft: 20,
+    marginLeft: 33,
+    borderWidth: 1,
+    borderRadius: 5,
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    fontSize: 15,
   },
   inputFieldText: {
     color: "white",
@@ -602,7 +608,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     marginHorizontal: 20,
-    marginTop: 10,
     marginBottom: 30,
   },
   datePickerButton: {
@@ -610,7 +615,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     backgroundColor: "#1e1e1e",
     borderRadius: 8,
-    alignItems: "center",
+    flex: 1,
+    marginRight: 36,
   },
   datePickerText: {
     color: "#FFFFFF",

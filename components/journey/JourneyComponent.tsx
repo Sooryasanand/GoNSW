@@ -169,20 +169,6 @@ const JourneyDetails = ({
             <Text style={styles.platformTitle}>Platform</Text>
             <Text style={styles.platformText}>{platformNo[2]}</Text>
           </View>
-          <View>
-            <TouchableOpacity>
-              <MaterialCommunityIcons
-                name="map-outline"
-                size={50}
-                color="#FFFFFF"
-                style={{
-                  marginLeft: 10,
-                  marginBottom: 10,
-                  alignSelf: "flex-end",
-                }}
-              />
-            </TouchableOpacity>
-          </View>
         </View>
       </View>
       <View style={styles.horizontalLine} />
