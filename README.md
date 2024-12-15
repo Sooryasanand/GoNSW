@@ -1,50 +1,45 @@
-# Welcome to your Expo app 👋
+# GoNSW  
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**GoNSW** is a comprehensive transit app tailored for Sydney commuters, offering real-time train timetables, next-train updates, and customizable travel features. The app is powered by the **NSW Transport API**, ensuring accurate and up-to-date train information to make your daily commute stress-free.  
 
-## Get started
+---
 
-1. Install dependencies
+## How to Run It?  
+The APK for **GoNSW** is available in the **Releases** section of its GitHub repository. Download and install the APK on your Android device to get started.  
 
-   ```bash
-   npm install
-   ```
+> **Note**: The app requires an active internet connection to fetch real-time train data via the NSW Transport API.  
 
-2. Start the app
+---
 
-   ```bash
-    npx expo start
-   ```
+## Key Features of the App  
+- **Real-Time Train Information**: Fetches and displays accurate train schedules, including next-train timings and platform details.  
+- **Route Saving**: Allows users to save frequently traveled routes for quick and easy access.  
+- **Custom Times**: Lets users set personalized travel times or reminders for recurring trips.  
+- **Dynamic Dashboard**: Provides an overview of saved routes, next trains, and essential travel details in a clean, user-friendly interface.  
+- **Offline Support**: Recently accessed routes and schedules are cached locally for reference when offline.  
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Technologies and Services Used  
+- **NSW Transport API**: The core service for retrieving train timetables and related updates.  
+- **React Native**: Ensures smooth performance and cross-platform compatibility.  
+- **AsyncStorage**: Used to cache saved routes and recent train data for offline use.  
+- **Expo Notifications**: Sends reminders for upcoming journeys or saved routes.  
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## Screenshots  
+Here are some screenshots of the **GoNSW** app:  
 
-When you're ready, run:
+**Home Screen**: Displays the saved routes.
+<img src="https://github.com/Sooryasanand/GoNSW/blob/main/assets/images/Screenshots/Phone/Home%20Screen.png" width="500" height="300">
+**Timetable Screen**: Shows next train services and travel time.
+<img src="https://github.com/Sooryasanand/GoNSW/blob/main/assets/images/Screenshots/Phone/Routes%20Screen.png" width="500" height="300">
+**Routes Screen**: Shows detailed train stations and information.
+<img src="https://github.com/Sooryasanand/GoNSW/blob/main/assets/images/Screenshots/Phone/Route%20Screen.png" width="500" height="300">
+**Transfer Routes**: Interface for showing the transfer routes.  
+<img src="https://github.com/Sooryasanand/GoNSW/blob/main/assets/images/Screenshots/Phone/TransferRoute%20Screen.png" width="500" height="300">
 
-```bash
-npm run reset-project
-```
+---
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+**GoNSW** brings real-time train updates and route management to your fingertips, making it the perfect companion for Sydney's public transport system. Download the APK now and enjoy hassle-free commuting!
