@@ -32,16 +32,16 @@ The APK for **GoNSW** is available in the **Releases** section of its GitHub rep
 Here are some screenshots of the **GoNSW** app:  
 
 #### **Home Screen**: Displays the saved routes.
-<img src="https://github.com/Sooryasanand/GoNSW/blob/main/assets/images/Screenshots/Phone/Home%20Screen.png" width="300" height="600">
+<img src="https://github.com/Sooryasanand/GoNSW/blob/main/assets/images/Screenshots/Phone/Home%20Screen.png" width="320" height="600">
 
 #### **Timetable Screen**: Shows next train services and travel time.
-<img src="https://github.com/Sooryasanand/GoNSW/blob/main/assets/images/Screenshots/Phone/Routes%20Screen.png" width="300" height="600">
+<img src="https://github.com/Sooryasanand/GoNSW/blob/main/assets/images/Screenshots/Phone/Routes%20Screen.png" width="320" height="600">
 
 #### **Routes Screen**: Shows detailed train stations and information.
-<img src="https://github.com/Sooryasanand/GoNSW/blob/main/assets/images/Screenshots/Phone/Route%20Screen.png" width="300" height="600">
+<img src="https://github.com/Sooryasanand/GoNSW/blob/main/assets/images/Screenshots/Phone/Route%20Screen.png" width="320" height="600">
 
 #### **Transfer Routes**: Interface for showing the transfer routes.  
-<img src="https://github.com/Sooryasanand/GoNSW/blob/main/assets/images/Screenshots/Phone/TransferRoute%20Screen.png" width="300" height="600">
+<img src="https://github.com/Sooryasanand/GoNSW/blob/main/assets/images/Screenshots/Phone/TransferRoute%20Screen.png" width="320" height="600">
 
 ---
 
