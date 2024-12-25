@@ -28,8 +28,10 @@ The APK for **GoNSW** is available in the **Releases** section of its GitHub rep
 
 ---
 
-## Potential Future Updates
+## Potential Enhancements for Future Releases
 - **Add notifications for train delays**: Include real-time notifications for train delays to keep users informed promptly and improve their overall travel experience.
+
+---
 
 ## Screenshots  
 Here are some screenshots of the **GoNSW** app:  
