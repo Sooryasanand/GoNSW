@@ -50,4 +50,25 @@ Here are some screenshots of the **GoNSW** app:
 
 ---
 
+### Contributing
+
+We welcome contributions from the community to improve the Saibai Safety app. To contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch:
+    ```sh
+    git checkout -b feature-branch
+    ```
+3. Make your changes and commit them:
+    ```sh
+    git commit -m "Add new feature"
+    ```
+4. Push to the branch:
+    ```sh
+    git push origin feature-branch
+    ```
+5. Open a pull request on GitHub.
+
+---
+
 **GoNSW** brings real-time train updates and route management to your fingertips, making it the perfect companion for Sydney's public transport system. Download the APK now and enjoy hassle-free commuting!
